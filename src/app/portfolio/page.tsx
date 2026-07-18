@@ -77,6 +77,7 @@ export default function Portfolio() {
                     alt={`Website voor ${name}`}
                     fill
                     sizes="(max-width: 900px) 100vw, 33vw"
+                    style={{ objectFit: "cover" }}
                   />
                 ) : (
                   <>

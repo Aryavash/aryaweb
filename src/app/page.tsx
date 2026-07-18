@@ -154,6 +154,7 @@ export default function Home() {
                     alt={`Website voor ${project.name}`}
                     fill
                     sizes="(max-width: 900px) 100vw, 33vw"
+                    style={{ objectFit: "cover" }}
                   />
                 ) : (
                   <>
