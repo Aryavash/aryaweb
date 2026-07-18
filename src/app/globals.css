@@ -169,12 +169,6 @@ main {
     display: none;
   }
 }
-/* The glow's opacity is driven by an inline style, so !important is needed
-   to suppress it while the cursor is over a form or project mockup. */
-body:has(.contact-form:hover) .cursor-glow,
-body:has(.project-card:hover) .cursor-glow {
-  opacity: 0 !important;
-}
 .site-header-bar {
   position: sticky;
   top: 0;

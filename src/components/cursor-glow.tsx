@@ -16,7 +16,13 @@ export default function CursorGlow() {
     function onMove(e: MouseEvent) {
       targetX = e.clientX;
       targetY = e.clientY;
-      if (elRef.current) elRef.current.style.opacity = "1";
+      // Keep the glow away from the contact form and portfolio mockups.
+      const overQuietZone =
+        e.target instanceof Element &&
+        e.target.closest(".contact-form, .form-status, .project-card");
+      if (elRef.current) {
+        elRef.current.style.opacity = overQuietZone ? "0" : "1";
+      }
     }
 
     function loop() {
