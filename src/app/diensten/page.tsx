@@ -8,42 +8,52 @@ export const metadata: Metadata = {
     "Webdesign, websiteontwikkeling, SEO, hosting en onderhoud voor lokale ondernemingen in België.",
 };
 
-const services = [
-  [
-    "01",
-    "Webdesign",
-    "Een uniek en professioneel ontwerp dat past bij uw zaak en meteen vertrouwen uitstraalt.",
-  ],
-  [
-    "02",
-    "Websiteontwikkeling",
-    "Een snelle, veilige en gebruiksvriendelijke website die op elk scherm perfect werkt.",
-  ],
-  [
-    "03",
-    "SEO",
-    "Een sterke technische basis zodat lokale klanten u beter vinden in Google.",
-  ],
-  [
-    "04",
-    "Hosting",
-    "Betrouwbare hosting en een veilige basis, zonder dat u er zelf naar hoeft om te kijken.",
-  ],
-  [
-    "05",
-    "Onderhoud",
-    "Updates, kleine aanpassingen en ondersteuning nadat uw website online staat.",
-  ],
-  [
-    "06",
-    "Snelle laadtijden",
-    "Een vlotte website houdt bezoekers langer vast en helpt u beter scoren in zoekmachines.",
-  ],
-  [
-    "07",
-    "Mobielvriendelijk",
-    "Uw website ziet er even goed uit en werkt even vlot op smartphone, tablet en computer.",
-  ],
+type Service = {
+  no: string;
+  title: string;
+  text: string;
+  href?: string;
+};
+
+const services: Service[] = [
+  {
+    no: "01",
+    title: "Webdesign",
+    text: "Een uniek en professioneel ontwerp dat past bij uw zaak en meteen vertrouwen uitstraalt.",
+    href: "/diensten/webdesign",
+  },
+  {
+    no: "02",
+    title: "Websiteontwikkeling",
+    text: "Een snelle, veilige en gebruiksvriendelijke website die op elk scherm perfect werkt.",
+    href: "/diensten/websiteontwikkeling",
+  },
+  {
+    no: "03",
+    title: "SEO",
+    text: "Een sterke technische basis zodat lokale klanten u beter vinden in Google.",
+    href: "/diensten/seo",
+  },
+  {
+    no: "04",
+    title: "Hosting",
+    text: "Betrouwbare hosting en een veilige basis, zonder dat u er zelf naar hoeft om te kijken.",
+  },
+  {
+    no: "05",
+    title: "Onderhoud",
+    text: "Updates, kleine aanpassingen en ondersteuning nadat uw website online staat.",
+  },
+  {
+    no: "06",
+    title: "Snelle laadtijden",
+    text: "Een vlotte website houdt bezoekers langer vast en helpt u beter scoren in zoekmachines.",
+  },
+  {
+    no: "07",
+    title: "Mobielvriendelijk",
+    text: "Uw website ziet er even goed uit en werkt even vlot op smartphone, tablet en computer.",
+  },
 ];
 
 export default function Services() {
@@ -66,19 +76,34 @@ export default function Services() {
       </section>
       <section className="section-pad list-section">
         <div className="service-list">
-          {services.map(([no, title, text], i) => (
-            <article
-              className="service-row"
-              data-reveal="1"
-              data-index={i}
-              key={no}
-            >
-              <span>{no}</span>
-              <h3>{title}</h3>
-              <p>{text}</p>
-              <ArrowUpRight />
-            </article>
-          ))}
+          {services.map(({ no, title, text, href }, i) =>
+            href ? (
+              <Link
+                className="service-row"
+                data-reveal="1"
+                data-index={i}
+                href={href}
+                key={no}
+              >
+                <span>{no}</span>
+                <h3>{title}</h3>
+                <p>{text}</p>
+                <ArrowUpRight />
+              </Link>
+            ) : (
+              <article
+                className="service-row"
+                data-reveal="1"
+                data-index={i}
+                key={no}
+              >
+                <span>{no}</span>
+                <h3>{title}</h3>
+                <p>{text}</p>
+                <ArrowUpRight />
+              </article>
+            ),
+          )}
         </div>
       </section>
       <section className="cta-section section-pad">
