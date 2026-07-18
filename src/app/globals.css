@@ -508,6 +508,16 @@ h2 em {
   position: relative;
   z-index: 2;
 }
+.project-photo {
+  object-fit: cover;
+  z-index: 0;
+}
+.project-visual.has-photo {
+  color: var(--cream);
+}
+.project-visual.has-photo .project-number {
+  text-shadow: 0 1px 14px rgba(0, 0, 0, 0.7);
+}
 .project-mark {
   position: absolute;
   font-size: 170px;

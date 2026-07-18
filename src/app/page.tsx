@@ -1,12 +1,22 @@
+import Image from "next/image";
 import Link from "next/link";
 import { ArrowUpRight } from "../components/icons";
 
-const projects = [
+type Project = {
+  name: string;
+  type: string;
+  color: string;
+  mark: string;
+  image?: string;
+};
+
+const projects: Project[] = [
   {
     name: "Cut Barbershop",
     type: "Website voor barbershop",
     color: "peach",
     mark: "C",
+    image: "/portfolio/cut-barbershop.avif",
   },
   {
     name: "The Fade Room",
@@ -19,6 +29,7 @@ const projects = [
     type: "Website voor barbershop",
     color: "lavender",
     mark: "O",
+    image: "/portfolio/old-school-barbers.jpg",
   },
 ];
 
@@ -133,10 +144,24 @@ export default function Home() {
               data-magnet="card"
               key={project.name}
             >
-              <div className="project-visual">
+              <div
+                className={`project-visual${project.image ? " has-photo" : ""}`}
+              >
+                {project.image ? (
+                  <Image
+                    className="project-photo"
+                    src={project.image}
+                    alt={`Website voor ${project.name}`}
+                    fill
+                    sizes="(max-width: 900px) 100vw, 33vw"
+                  />
+                ) : (
+                  <>
+                    <span className="project-mark">{project.mark}</span>
+                    <span className="project-shape" />
+                  </>
+                )}
                 <span className="project-number">0{index + 1}</span>
-                <span className="project-mark">{project.mark}</span>
-                <span className="project-shape" />
               </div>
               <div className="project-meta">
                 <div>
