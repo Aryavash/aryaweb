@@ -1,5 +1,6 @@
 "use client";
 import { useState, type FormEvent } from "react";
+import Link from "next/link";
 import { ArrowUpRight } from "./icons";
 
 type Status = "idle" | "sending" | "success" | "error";
@@ -156,8 +157,11 @@ export default function ContactForm() {
         <label className="checkbox-field">
           <input type="checkbox" name="privacyAccepted" value="Ja" required />
           <span>
-            Ik ga akkoord dat Aryaweb mijn gegevens gebruikt om contact met mij
-            op te nemen.
+            Ik ga akkoord met het{" "}
+            <Link className="line-link" href="/privacy" target="_blank">
+              privacybeleid
+            </Link>{" "}
+            van Aryaweb.
           </span>
         </label>
       </div>

@@ -20,6 +20,7 @@ export default function SiteFooter() {
         <Link href="/pricing">Tarieven</Link>
         <Link href="/about">Over mij</Link>
         <Link href="/contact">Contact</Link>
+        <Link href="/privacy">Privacy</Link>
       </div>
       <div className="footer-bottom">
         <span>© 2026 Aryaweb</span>

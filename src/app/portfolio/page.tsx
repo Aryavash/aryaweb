@@ -51,6 +51,12 @@ const work = [
     "lavender",
     "B",
   ],
+  [
+    "De Barbier",
+    "Een klassieke website voor een barbier met oog voor traditie.",
+    "cream",
+    "D",
+  ],
 ];
 
 export default function Portfolio() {
