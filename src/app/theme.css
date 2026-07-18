@@ -1,0 +1,14 @@
+@media (min-width: 701px) {
+  .site-header nav {
+    margin-left: auto;
+  }
+  .site-header .header-contact {
+    margin-left: 46px;
+  }
+}
+
+@media (max-width: 700px) {
+  .site-header .header-contact {
+    margin-left: auto;
+  }
+}
