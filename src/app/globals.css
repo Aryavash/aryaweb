@@ -202,22 +202,40 @@ main {
   height: 22px;
 }
 .logo {
-  letter-spacing: 0.13em;
+  display: inline-flex;
+  align-items: center;
+  gap: 9px;
   font-weight: 700;
-  font-size: 13px;
   white-space: nowrap;
 }
-.logo span {
-  display: inline-grid;
-  place-items: center;
-  width: 29px;
-  height: 29px;
-  margin-right: 6px;
-  color: var(--bg);
+.logo-mark {
+  position: relative;
+  width: 24px;
+  height: 24px;
+  flex-shrink: 0;
+}
+.logo-mark span {
+  position: absolute;
+  width: 15px;
+  height: 15px;
+  border-radius: 4px;
+}
+.logo-mark span:first-child {
+  top: 0;
+  left: 0;
   background: var(--text);
-  border-radius: 50%;
-  font-size: 9px;
-  letter-spacing: 0;
+}
+.logo-mark span:last-child {
+  right: 0;
+  bottom: 0;
+  background: var(--orange);
+}
+.logo-word {
+  font-size: 15px;
+  letter-spacing: 0.06em;
+}
+.logo-word span {
+  color: var(--orange);
 }
 nav {
   display: flex;

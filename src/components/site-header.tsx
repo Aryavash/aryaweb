@@ -3,6 +3,7 @@ import { useEffect, useRef, useState } from "react";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { MenuIcon, CloseIcon } from "./icons";
+import SiteLogo from "./site-logo";
 
 const links = [
   ["Home", "/"],
@@ -52,7 +53,7 @@ export default function SiteHeader() {
     <header className="site-header-bar">
       <div className="site-header">
         <Link className="logo" href="/" onClick={() => setOpen(false)}>
-          <span>AW</span> ARYAWEB
+          <SiteLogo />
         </Link>
         <nav id="site-nav" ref={navRef} className={open ? "nav-open" : ""}>
           {links.map(([label, href]) => (

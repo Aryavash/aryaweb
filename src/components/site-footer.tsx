@@ -1,11 +1,12 @@
 import Link from "next/link";
+import SiteLogo from "./site-logo";
 
 export default function SiteFooter() {
   return (
     <footer>
       <div>
         <Link className="logo" href="/">
-          <span>AW</span> ARYAWEB
+          <SiteLogo />
         </Link>
         <p>
           Professionele websites voor
