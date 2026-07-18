@@ -100,7 +100,6 @@ export default function Services() {
                 <span>{no}</span>
                 <h3>{title}</h3>
                 <p>{text}</p>
-                <ArrowUpRight />
               </article>
             ),
           )}
