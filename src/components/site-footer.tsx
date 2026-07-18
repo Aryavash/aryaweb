@@ -1,11 +1,25 @@
+"use client";
 import Link from "next/link";
+import { usePathname } from "next/navigation";
 import SiteLogo from "./site-logo";
 
 export default function SiteFooter() {
+  const pathname = usePathname();
+
+  // On the home page the logo links to the route we're already on, so no
+  // navigation happens. Scroll back to the top instead. Elsewhere the link
+  // navigates home, which already lands at the top.
+  function handleLogoClick(e: React.MouseEvent<HTMLAnchorElement>) {
+    if (pathname === "/") {
+      e.preventDefault();
+      window.scrollTo({ top: 0, behavior: "smooth" });
+    }
+  }
+
   return (
     <footer>
       <div>
-        <Link className="logo" href="/">
+        <Link className="logo" href="/" onClick={handleLogoClick}>
           <SiteLogo />
         </Link>
         <p>
