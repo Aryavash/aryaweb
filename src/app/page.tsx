@@ -23,6 +23,7 @@ const projects: Project[] = [
     type: "Website voor barbershop",
     color: "lime",
     mark: "F",
+    image: "/portfolio/the-fade-room.jpg",
   },
   {
     name: "Old School Barbers",

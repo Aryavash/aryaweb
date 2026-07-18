@@ -30,6 +30,7 @@ const work: Work[] = [
     description: "Een strakke boekingservaring voor een drukbezochte barbershop.",
     color: "lime",
     mark: "F",
+    image: "/portfolio/the-fade-room.jpg",
   },
   {
     name: "Old School Barbers",
