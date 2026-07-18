@@ -9,16 +9,16 @@ const projects = [
     mark: "C",
   },
   {
-    name: "Bella Bakkerij",
-    type: "Website voor lokale bakkerij",
+    name: "The Fade Room",
+    type: "Website voor barbershop",
     color: "lime",
-    mark: "B",
+    mark: "F",
   },
   {
-    name: "Volt Elektriciteit",
-    type: "Website voor elektricien",
+    name: "Old School Barbers",
+    type: "Website voor barbershop",
     color: "lavender",
-    mark: "V",
+    mark: "O",
   },
 ];
 
@@ -111,7 +111,7 @@ export default function Home() {
             techniek tot een online visitekaartje dat vertrouwen wekt.
           </p>
         </div>
-        <Link className="text-link line-link" data-reveal="1" href="/services">
+        <Link className="text-link line-link" data-reveal="1" href="/diensten">
           Ontdek mijn diensten →
         </Link>
       </section>
@@ -167,7 +167,7 @@ export default function Home() {
           className="button button-cream"
           data-reveal="1"
           data-magnet="pill"
-          href="/about"
+          href="/over-mij"
         >
           Meer over mij <ArrowUpRight />
         </Link>

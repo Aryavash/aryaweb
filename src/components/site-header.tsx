@@ -6,10 +6,10 @@ import { MenuIcon, CloseIcon } from "./icons";
 
 const links = [
   ["Home", "/"],
-  ["Diensten", "/services"],
+  ["Diensten", "/diensten"],
   ["Portfolio", "/portfolio"],
-  ["Tarieven", "/pricing"],
-  ["Over mij", "/about"],
+  ["Tarieven", "/tarieven"],
+  ["Over mij", "/over-mij"],
 ];
 
 export default function SiteHeader() {

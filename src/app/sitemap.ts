@@ -5,10 +5,10 @@ const siteUrl = "https://www.aryaweb.be";
 export default function sitemap(): MetadataRoute.Sitemap {
   const routes = [
     "",
-    "/services",
+    "/diensten",
     "/portfolio",
-    "/pricing",
-    "/about",
+    "/tarieven",
+    "/over-mij",
     "/contact",
     "/privacy",
   ];

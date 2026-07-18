@@ -16,46 +16,16 @@ const work = [
     "C",
   ],
   [
-    "Bella Bakkerij",
-    "Een warme online etalage voor een ambachtelijke lokale bakkerij.",
-    "lime",
-    "B",
-  ],
-  [
-    "Volt Elektriciteit",
-    "Een heldere website voor een elektricien die vertrouwen wil opbouwen.",
-    "lavender",
-    "V",
-  ],
-  [
     "The Fade Room",
     "Een strakke boekingservaring voor een drukbezochte barbershop.",
-    "cream",
+    "lime",
     "F",
   ],
   [
     "Old School Barbers",
     "Een tijdloze website met een vintage uitstraling en online afspraken.",
-    "peach",
-    "O",
-  ],
-  [
-    "Kingpin Barbershop",
-    "Een gedurfde website die de sfeer van de zaak direct laat voelen.",
-    "lime",
-    "K",
-  ],
-  [
-    "Blade & Co.",
-    "Een verfijnde online presentatie voor een premium herenkapsalon.",
     "lavender",
-    "B",
-  ],
-  [
-    "De Barbier",
-    "Een klassieke website voor een barbier met oog voor traditie.",
-    "cream",
-    "D",
+    "O",
   ],
 ];
 

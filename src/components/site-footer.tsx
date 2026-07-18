@@ -15,10 +15,10 @@ export default function SiteFooter() {
       </div>
       <div className="footer-links">
         <Link href="/">Home</Link>
-        <Link href="/services">Diensten</Link>
+        <Link href="/diensten">Diensten</Link>
         <Link href="/portfolio">Portfolio</Link>
-        <Link href="/pricing">Tarieven</Link>
-        <Link href="/about">Over mij</Link>
+        <Link href="/tarieven">Tarieven</Link>
+        <Link href="/over-mij">Over mij</Link>
         <Link href="/contact">Contact</Link>
         <Link href="/privacy">Privacy</Link>
       </div>
