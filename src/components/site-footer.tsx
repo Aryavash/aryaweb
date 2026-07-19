@@ -28,15 +28,24 @@ export default function SiteFooter() {
           lokale ondernemingen in België.
         </p>
       </div>
-      <div className="footer-links">
-        <Link href="/">Home</Link>
-        <Link href="/diensten">Diensten</Link>
-        <Link href="/portfolio">Portfolio</Link>
-        <Link href="/tarieven">Tarieven</Link>
-        <Link href="/over-mij">Over mij</Link>
-        <Link href="/contact">Contact</Link>
-        <Link href="/privacy">Privacy</Link>
-      </div>
+      <nav className="footer-nav" aria-label="Footer">
+        <div className="footer-col">
+          <span className="footer-col-label">Menu</span>
+          <Link href="/">Home</Link>
+          <Link href="/diensten">Diensten</Link>
+          <Link href="/portfolio">Portfolio</Link>
+          <Link href="/tarieven">Tarieven</Link>
+          <Link href="/over-mij">Over mij</Link>
+          <Link href="/contact">Contact</Link>
+          <Link href="/privacy">Privacy</Link>
+        </div>
+        <div className="footer-col">
+          <span className="footer-col-label">Diensten</span>
+          <Link href="/diensten/webdesign">Webdesign</Link>
+          <Link href="/diensten/websiteontwikkeling">Websiteontwikkeling</Link>
+          <Link href="/diensten/seo">SEO</Link>
+        </div>
+      </nav>
       <div className="footer-bottom">
         <span>© 2026 Aryaweb</span>
         <span>Met zorg gemaakt in België.</span>

@@ -13,6 +13,13 @@ const links = [
   ["Over mij", "/over-mij"],
 ];
 
+// A top-level link is active on its own route and on any nested route beneath
+// it, so "Diensten" stays lit on /diensten/webdesign and its siblings.
+function isActive(path: string, href: string) {
+  if (href === "/") return path === "/";
+  return path === href || path.startsWith(`${href}/`);
+}
+
 export default function SiteHeader() {
   const path = usePathname();
   const [open, setOpen] = useState(false);
@@ -56,17 +63,20 @@ export default function SiteHeader() {
           <SiteLogo />
         </Link>
         <nav id="site-nav" ref={navRef} className={open ? "nav-open" : ""}>
-          {links.map(([label, href]) => (
-            <Link
-              className={path === href ? "active" : ""}
-              data-active={path === href}
-              href={href}
-              key={href}
-              onClick={() => setOpen(false)}
-            >
-              {label}
-            </Link>
-          ))}
+          {links.map(([label, href]) => {
+            const active = isActive(path, href);
+            return (
+              <Link
+                className={active ? "active" : ""}
+                data-active={active}
+                href={href}
+                key={href}
+                onClick={() => setOpen(false)}
+              >
+                {label}
+              </Link>
+            );
+          })}
           <Link
             className={`nav-contact-link ${path === "/contact" ? "active" : ""}`}
             href="/contact"

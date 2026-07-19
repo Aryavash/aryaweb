@@ -34,7 +34,7 @@ export const metadata: Metadata = {
     url: siteUrl,
   },
   twitter: {
-    card: "summary",
+    card: "summary_large_image",
     title: "Aryaweb | Professionele websites voor lokale ondernemingen",
     description:
       "Webdesign en websiteontwikkeling voor lokale ondernemingen in België.",
