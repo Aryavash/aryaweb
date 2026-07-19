@@ -13,6 +13,9 @@ type Tier = {
   price: string;
   countTarget?: number;
   countPrefix?: string;
+  badge?: string;
+  tagline?: string;
+  cta: string;
   items: string[];
 };
 
@@ -22,14 +25,14 @@ const tiers: Tier[] = [
     price: "€1.000",
     countTarget: 1000,
     countPrefix: "€",
+    cta: "Vrijblijvend aanvragen",
     items: [
-      "Tot 5 pagina's",
-      "Mobielvriendelijk",
-      "Contactformulier",
-      "WhatsApp-integratie",
-      "Google Maps",
-      "Basis SEO",
-      "Oplevering binnen 2 weken",
+      "Een professionele uitstraling vanaf dag één",
+      "Perfect leesbaar op elke smartphone",
+      "Klanten bereiken u vlot via formulier en WhatsApp",
+      "Eenvoudig te vinden dankzij Google Maps",
+      "Een sterke basis om gevonden te worden in Google",
+      "Online binnen twee weken",
     ],
   },
   {
@@ -37,23 +40,27 @@ const tiers: Tier[] = [
     price: "€2.500",
     countTarget: 2500,
     countPrefix: "€",
+    badge: "Meest gekozen",
+    cta: "Vrijblijvend aanvragen",
     items: [
       "Alles uit Starter Website",
-      "Uitgebreid maatwerkontwerp",
-      "Tot 10 pagina's",
-      "Geavanceerde SEO-basis",
-      "Snelle laadtijden",
-      "Persoonlijke opleiding",
+      "Een uniek ontwerp dat vertrouwen wekt",
+      "Ruimte om uw volledige aanbod te tonen",
+      "Beter gevonden worden in Google",
+      "Een snelle site die bezoekers vasthoudt",
+      "Persoonlijke uitleg zodat u zelf verder kunt",
     ],
   },
   {
     name: "Maatwerk",
     price: "Op aanvraag",
+    tagline: "Voor wie geen concessies doet.",
+    cta: "Vraag een voorstel",
     items: [
-      "Webshop of complexe website",
-      "Koppelingen op maat",
-      "Content en conversie",
-      "Doorlopende ondersteuning",
+      "Volledig op maat van uw ambitie",
+      "Webshop of complexe koppelingen",
+      "Gericht op meer aanvragen en omzet",
+      "Persoonlijke opvolging op lange termijn",
     ],
   },
 ];
@@ -76,6 +83,10 @@ export default function Pricing() {
         </p>
       </section>
       <section className="pricing section-pad">
+        <p className="price-assurance" data-reveal="1">
+          Geen verborgen kosten. Eén vaste prijs. Persoonlijke begeleiding van
+          begin tot eind.
+        </p>
         <div className="price-grid">
           {tiers.map((tier, i) => (
             <article
@@ -84,6 +95,9 @@ export default function Pricing() {
               data-index={i}
               key={tier.name}
             >
+              {tier.badge ? (
+                <span className="price-badge">{tier.badge}</span>
+              ) : null}
               <p className="section-kicker">0{i + 1}</p>
               <h3>{tier.name}</h3>
               <span
@@ -93,17 +107,24 @@ export default function Pricing() {
               >
                 {tier.price}
               </span>
+              {tier.tagline ? (
+                <p className="price-tagline">{tier.tagline}</p>
+              ) : null}
               <ul>
                 {tier.items.map((item) => (
                   <li key={item}>{item}</li>
                 ))}
               </ul>
               <Link className="button" href="/contact">
-                Kies {tier.name} <ArrowUpRight />
+                {tier.cta} <ArrowUpRight />
               </Link>
             </article>
           ))}
         </div>
+        <p className="price-note" data-reveal="1">
+          Hosting, domeinnaam en onderhoud lopen via een transparant jaartarief.
+          We bespreken dit vooraf, zodat u nooit voor verrassingen komt te staan.
+        </p>
       </section>
       <section className="cta-section section-pad">
         <p data-reveal="1">Heeft uw zaak iets anders nodig?</p>

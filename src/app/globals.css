@@ -688,17 +688,44 @@ footer p {
   grid-template-columns: repeat(3, 1fr);
   gap: 18px;
 }
+.price-assurance {
+  max-width: 640px;
+  margin: 0 0 44px;
+  font-size: 17px;
+  line-height: 1.6;
+  color: rgba(236, 231, 220, 0.72);
+}
 .price-card {
+  position: relative;
   border: 1px solid var(--line);
-  padding: 28px;
+  padding: 30px;
   min-height: 390px;
   display: flex;
   flex-direction: column;
+  transition:
+    opacity 0.8s cubic-bezier(0.16, 1, 0.3, 1),
+    transform 0.8s cubic-bezier(0.16, 1, 0.3, 1),
+    border-color 0.35s ease;
+}
+.price-card:not(.featured):hover {
+  border-color: rgba(236, 231, 220, 0.4);
 }
 .price-card.featured {
   background: var(--orange);
   color: var(--bg);
   box-shadow: 0 24px 60px -24px rgba(0, 0, 0, 0.7);
+}
+.price-badge {
+  position: absolute;
+  top: 24px;
+  right: 24px;
+  font-size: 10px;
+  font-weight: 700;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  padding: 6px 12px;
+  border-radius: 99px;
+  border: 1px solid color-mix(in srgb, currentColor 42%, transparent);
 }
 .price-card h3 {
   font-size: 25px;
@@ -709,21 +736,55 @@ footer p {
   font-family: var(--font-playfair);
   font-size: 40px;
 }
+.price-tagline {
+  font-family: var(--font-playfair);
+  font-style: italic;
+  font-size: 16px;
+  line-height: 1.4;
+  margin: 12px 0 0;
+  color: rgba(236, 231, 220, 0.58);
+}
 .price-card ul {
   list-style: none;
   padding: 0;
-  margin: 28px 0;
-  line-height: 2;
+  margin: 30px 0;
   font-size: 14px;
+}
+.price-card li {
+  display: flex;
+  gap: 11px;
+  align-items: flex-start;
+  padding: 13px 0;
+  line-height: 1.5;
+  border-bottom: 1px solid color-mix(in srgb, currentColor 13%, transparent);
+}
+.price-card li:first-child {
+  border-top: 1px solid color-mix(in srgb, currentColor 13%, transparent);
 }
 .price-card li:before {
   content: "✓";
-  margin-right: 8px;
+  color: var(--orange);
+  flex-shrink: 0;
+}
+.price-card.featured li:before {
+  color: inherit;
 }
 .price-card .button {
   margin-top: auto;
   justify-content: center;
   border: 1px solid currentColor;
+}
+.price-note {
+  max-width: 640px;
+  margin: 38px 0 0;
+  font-size: 13px;
+  line-height: 1.65;
+  color: rgba(236, 231, 220, 0.5);
+}
+@media (max-width: 900px) {
+  .price-grid {
+    grid-template-columns: 1fr;
+  }
 }
 .legal-section {
   padding-bottom: 120px;
