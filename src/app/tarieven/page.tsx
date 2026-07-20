@@ -78,8 +78,8 @@ export default function Pricing() {
           <em>Echte waarde.</em>
         </h1>
         <p data-reveal="1">
-          Elke zaak is anders. Deze pakketten geven u een helder vertrekpunt
-          voor een professionele website die meegroeit met uw onderneming.
+          Elke zaak is anders. Deze pakketten zijn een helder vertrekpunt voor
+          een website die meegroeit met uw onderneming.
         </p>
       </section>
       <section className="pricing section-pad">

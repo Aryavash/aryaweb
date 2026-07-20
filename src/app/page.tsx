@@ -47,9 +47,8 @@ export default function Home() {
               die uw bedrijf <em>laten groeien.</em>
             </h1>
             <p className="hero-copy">
-              Ik ontwerp en ontwikkel moderne websites voor kappers,
-              restaurants, bakkers, elektriciens, loodgieters, fitnesszaken en
-              andere lokale ondernemingen.
+              Ik ontwerp en ontwikkel moderne websites voor lokale
+              ondernemingen — van kappers tot restaurants en bakkers.
             </p>
             <div className="button-row">
               <Link
@@ -118,9 +117,8 @@ export default function Home() {
             verdient een <em>sterke site.</em>
           </h2>
           <p data-reveal="1">
-            Uw website is vaak het eerste contact met een nieuwe klant. Daarom
-            combineer ik heldere strategie, overtuigend ontwerp en degelijke
-            techniek tot een online visitekaartje dat vertrouwen wekt.
+            Uw website is vaak de eerste indruk. Ik combineer sterk ontwerp en
+            degelijke techniek tot een site die meteen vertrouwen wekt.
           </p>
         </div>
         <Link className="text-link line-link" data-reveal="1" href="/diensten">
@@ -186,9 +184,8 @@ export default function Home() {
           <em>Meer resultaat.</em>
         </h2>
         <p data-reveal="1">
-          Geen ingewikkelde processen of onnodige lagen. U werkt rechtstreeks
-          met mij samen, van eerste idee tot een website waar u trots op mag
-          zijn.
+          Geen omwegen. U werkt rechtstreeks met mij samen, van eerste idee tot
+          een site waar u trots op bent.
         </p>
         <Link
           className="button button-cream"

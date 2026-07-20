@@ -55,9 +55,8 @@ export default function Portfolio() {
           <em>bijblijven.</em>
         </h1>
         <p data-reveal="1">
-          Een selectie van conceptprojecten voor lokale ondernemers. Elk ontwerp
-          is gemaakt om helder te communiceren, vertrouwen op te bouwen en
-          bezoekers in klanten te veranderen.
+          Een selectie van conceptprojecten voor lokale ondernemers, gemaakt om
+          te overtuigen en bezoekers in klanten te veranderen.
         </p>
       </section>
       <section className="work-section section-pad">

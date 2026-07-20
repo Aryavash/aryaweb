@@ -69,9 +69,8 @@ export default function Services() {
           meer dan een <em>mooie pagina.</em>
         </h1>
         <p data-reveal="1">
-          Het is uw beste verkoper, uw eerste indruk en de plek waar nieuwe
-          klanten beslissen om contact op te nemen. Ik bouw websites die dat
-          waarmaken.
+          Uw beste verkoper en eerste indruk — de plek waar klanten beslissen
+          contact op te nemen. Ik bouw sites die dat waarmaken.
         </p>
       </section>
       <section className="section-pad list-section">

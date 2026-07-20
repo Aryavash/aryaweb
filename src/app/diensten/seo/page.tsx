@@ -44,9 +44,8 @@ export default function Seo() {
           in <em>Google.</em>
         </h1>
         <p data-reveal="1">
-          De mooiste website heeft weinig zin als niemand ze vindt. Ik leg een
-          sterke technische basis zodat lokale klanten u tegenkomen op het moment
-          dat ze u nodig hebben.
+          Een mooie website heeft weinig zin als niemand ze vindt. Ik leg de
+          technische basis zodat lokale klanten u vinden wanneer het telt.
         </p>
         <Link className="text-link line-link" data-reveal="1" href="/diensten">
           ← Terug naar diensten
@@ -78,9 +77,9 @@ export default function Seo() {
           <em>Door de juiste mensen.</em>
         </h2>
         <p data-reveal="1">
-          SEO draait niet om trucjes, maar om een website die snel, helder en
-          betrouwbaar is. Ik bouw die basis in vanaf de eerste dag, zodat u ook
-          op lange termijn beter scoort in de zoekresultaten.
+          SEO draait niet om trucjes, maar om een snelle, heldere en betrouwbare
+          site. Die basis bouw ik in vanaf dag één, zodat u ook op lange termijn
+          scoort.
         </p>
       </section>
       <section className="cta-section section-pad">

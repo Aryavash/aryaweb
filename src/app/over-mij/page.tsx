@@ -20,8 +20,8 @@ export default function About() {
           <em>Grote zorg.</em>
         </h1>
         <p data-reveal="1">
-          Met Aryaweb help ik lokale ondernemingen om meer klanten te bereiken
-          met moderne websites die helder, snel en betrouwbaar aanvoelen.
+          Met Aryaweb help ik lokale ondernemingen aan meer klanten met websites
+          die helder, snel en betrouwbaar zijn.
         </p>
       </section>
       <section
@@ -33,17 +33,14 @@ export default function About() {
       </section>
       <section className="about-copy section-pad">
         <p data-reveal="1">
-          Een goede website moet niet alleen mooi zijn. Ze moet duidelijk maken
-          waarom klanten voor úw zaak moeten kiezen. Daarom vertaal ik uw
-          verhaal naar een professionele online aanwezigheid die vertrouwen wekt
-          en nieuwe aanvragen oplevert.
+          Een goede website is niet alleen mooi. Ze maakt duidelijk waarom
+          klanten voor úw zaak kiezen — en zet bezoekers om in aanvragen.
         </p>
         <aside data-reveal="1">
           <p className="section-kicker">ZO WERK IK</p>
           <p>
-            U werkt rechtstreeks met mij samen: zonder onnodige tussenpersonen,
-            met eerlijk advies en een duidelijk proces. Ik luister naar uw
-            doelen, maak slimme keuzes en zorg dat u altijd weet waar we staan.
+            U werkt rechtstreeks met mij samen: eerlijk advies, een duidelijk
+            proces, geen tussenpersonen. Ik zorg dat u altijd weet waar we staan.
           </p>
           <Link className="text-link line-link" href="/contact">
             Werk met mij samen →

@@ -44,9 +44,9 @@ export default function Websiteontwikkeling() {
           <em>gewoon werkt.</em>
         </h1>
         <p data-reveal="1">
-          Een mooi ontwerp is pas waardevol als het ook technisch klopt. Ik
-          bouw uw website snel, veilig en gebruiksvriendelijk, zodat bezoekers
-          moeiteloos vinden wat ze zoeken.
+          Een mooi ontwerp telt pas als het technisch klopt. Ik bouw uw site
+          snel, veilig en gebruiksvriendelijk, zodat bezoekers vlot vinden wat
+          ze zoeken.
         </p>
         <Link className="text-link line-link" data-reveal="1" href="/diensten">
           ← Terug naar diensten
@@ -78,9 +78,8 @@ export default function Websiteontwikkeling() {
           <em>Meer snelheid.</em>
         </h2>
         <p data-reveal="1">
-          Geen onnodige lagen of zware plugins. Ik houd uw website licht en
-          overzichtelijk, zodat ze snel laadt, betrouwbaar blijft en makkelijk
-          meegroeit met uw zaak.
+          Geen zware plugins of onnodige lagen. Ik houd uw site licht en snel,
+          zodat ze betrouwbaar blijft en makkelijk meegroeit.
         </p>
       </section>
       <section className="cta-section section-pad">

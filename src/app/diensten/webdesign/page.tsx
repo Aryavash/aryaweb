@@ -44,9 +44,8 @@ export default function Webdesign() {
           meteen <em>vertrouwen wekt.</em>
         </h1>
         <p data-reveal="1">
-          Uw website is vaak de eerste indruk die een klant van uw zaak krijgt.
-          Ik ontwerp een professionele, herkenbare uitstraling die aanvoelt als
-          een verlengstuk van uw onderneming.
+          Uw website is vaak de eerste indruk. Ik ontwerp een professionele,
+          herkenbare uitstraling die aanvoelt als een verlengstuk van uw zaak.
         </p>
         <Link className="text-link line-link" data-reveal="1" href="/diensten">
           ← Terug naar diensten
@@ -78,9 +77,8 @@ export default function Webdesign() {
           <em>Het moet werken.</em>
         </h2>
         <p data-reveal="1">
-          Een goed ontwerp ziet er niet alleen sterk uit, het maakt ook duidelijk
-          waarom klanten voor úw zaak moeten kiezen. Daarom vertrek ik altijd van
-          uw doelen en uw verhaal, niet van een willekeurig sjabloon.
+          Goed ontwerp is niet alleen mooi — het maakt duidelijk waarom klanten
+          voor úw zaak kiezen. Ik vertrek van uw verhaal, niet van een sjabloon.
         </p>
       </section>
       <section className="cta-section section-pad">
