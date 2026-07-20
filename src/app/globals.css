@@ -1156,3 +1156,12 @@ footer p {
     height: 250px;
   }
 }
+/* Small phones (<=360px): the home hero's longest word ("Professionele")
+   is wider than the screen at 60px, so it clips. Scale that headline down to
+   fit. Scoped to .hero-shell h1 and to <375px, leaving all other pages and
+   375px+ devices unchanged. */
+@media (max-width: 374px) {
+  .hero-shell h1 {
+    font-size: clamp(2.85rem, 15vw, 3.55rem);
+  }
+}
