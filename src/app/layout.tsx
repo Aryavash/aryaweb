@@ -14,7 +14,7 @@ import CursorGlow from "../components/cursor-glow";
 import SiteInteractions from "../components/site-interactions";
 import PageTransition from "../components/page-transition";
 
-const siteUrl = "https://www.aryaweb.be";
+const siteUrl = "https://aryaweb.be";
 
 export const metadata: Metadata = {
   metadataBase: new URL(siteUrl),
