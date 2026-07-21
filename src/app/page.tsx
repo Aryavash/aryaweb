@@ -202,9 +202,49 @@ export default function Home() {
           ))}
         </div>
       </section>
+      <section className="section-pad proof-section">
+        <p className="section-kicker" data-reveal="1">
+          03 / RESULTATEN
+        </p>
+        <div className="split-heading">
+          <h2 data-reveal="1">
+            Lokale zaken
+            <br />
+            <em>aan het woord.</em>
+          </h2>
+          <p data-reveal="1">
+            Echte reacties van ondernemingen waarmee ik werkte. Binnenkort leest
+            u hier hun ervaring in hun eigen woorden.
+          </p>
+        </div>
+        <div className="proof-grid">
+          {projects.map((project, index) => (
+            <article
+              className="proof-card"
+              data-reveal="1"
+              data-index={index}
+              key={project.name}
+            >
+              {/* Vervang de plaatshouders door een echt resultaat en citaat
+                  zodra de klant hiervoor toestemming heeft gegeven. */}
+              <span className="proof-stat">[X]% meer boekingen</span>
+              <p className="proof-quote">&ldquo;[Klantcitaat hier invullen]&rdquo;</p>
+              <div className="proof-author">
+                <span className={`proof-mark proof-${project.color}`}>
+                  {project.mark}
+                </span>
+                <div>
+                  <strong>{project.name}</strong>
+                  <span>[Naam eigenaar]</span>
+                </div>
+              </div>
+            </article>
+          ))}
+        </div>
+      </section>
       <section className="statement section-pad">
         <p className="section-kicker" data-reveal="1">
-          03 / MIJN AANPAK
+          04 / MIJN AANPAK
         </p>
         <h2 data-reveal="1">
           Minder ruis.
@@ -226,7 +266,7 @@ export default function Home() {
       </section>
       <section className="section-pad process-section">
         <p className="section-kicker" data-reveal="1">
-          04 / HOE HET WERKT
+          05 / HOE HET WERKT
         </p>
         <div className="split-heading">
           <h2 data-reveal="1">
