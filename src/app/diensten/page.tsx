@@ -111,14 +111,19 @@ export default function Services() {
           <br />
           <em>samen.</em>
         </h2>
-        <Link
-          className="button button-dark"
-          data-reveal="1"
-          data-magnet="pill"
-          href="/contact"
-        >
-          Gratis kennismaking <ArrowUpRight />
-        </Link>
+        <div className="cta-actions">
+          <Link
+            className="button button-dark"
+            data-reveal="1"
+            data-magnet="pill"
+            href="/contact"
+          >
+            Gratis kennismaking <ArrowUpRight />
+          </Link>
+          <Link className="text-link" data-reveal="1" href="/tarieven">
+            Bekijk tarieven →
+          </Link>
+        </div>
       </section>
     </>
   );

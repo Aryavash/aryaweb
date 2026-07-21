@@ -619,6 +619,16 @@ h2 em {
 .cta-section .button {
   margin: auto;
 }
+.cta-actions {
+  display: flex;
+  gap: 26px;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+.cta-section .cta-actions .button {
+  margin: 0;
+}
 .process-section {
   background: var(--bg-2);
   padding-top: 90px;
