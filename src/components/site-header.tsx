@@ -10,6 +10,7 @@ const links = [
   ["Diensten", "/diensten"],
   ["Portfolio", "/portfolio"],
   ["Tarieven", "/tarieven"],
+  ["FAQ", "/faq"],
   ["Over mij", "/over-mij"],
 ];
 

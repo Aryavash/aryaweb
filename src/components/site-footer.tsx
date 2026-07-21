@@ -35,9 +35,11 @@ export default function SiteFooter() {
           <Link href="/diensten">Diensten</Link>
           <Link href="/portfolio">Portfolio</Link>
           <Link href="/tarieven">Tarieven</Link>
+          <Link href="/faq">FAQ</Link>
           <Link href="/over-mij">Over mij</Link>
           <Link href="/contact">Contact</Link>
           <Link href="/privacy">Privacy</Link>
+          <Link href="/voorwaarden">Algemene voorwaarden</Link>
         </div>
         <div className="footer-col">
           <span className="footer-col-label">Diensten</span>

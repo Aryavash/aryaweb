@@ -11,9 +11,11 @@ export default function sitemap(): MetadataRoute.Sitemap {
     "/diensten/seo",
     "/portfolio",
     "/tarieven",
+    "/faq",
     "/over-mij",
     "/contact",
     "/privacy",
+    "/voorwaarden",
   ];
   return routes.map((route) => ({
     url: `${siteUrl}${route}`,
