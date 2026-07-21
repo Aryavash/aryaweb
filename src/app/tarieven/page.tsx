@@ -5,11 +5,12 @@ import { ArrowUpRight } from "../../components/icons";
 export const metadata: Metadata = {
   title: "Tarieven",
   description:
-    "Duidelijke prijzen voor professionele websites: Starter, Premium en Maatwerk pakketten.",
+    "Een website die meer klanten aantrekt. Kies het pakket dat bij uw onderneming past: Landing Page, Starter, Premium of volledig Maatwerk.",
 };
 
 type Tier = {
   name: string;
+  from?: string;
   price: string;
   countTarget?: number;
   countPrefix?: string;
@@ -21,15 +22,34 @@ type Tier = {
 
 const tiers: Tier[] = [
   {
+    name: "Landing Page",
+    from: "Vanaf",
+    price: "€750",
+    countTarget: 750,
+    countPrefix: "€",
+    tagline: "Perfect voor zelfstandigen, starters en kleine ondernemingen.",
+    cta: "Start uw project",
+    items: [
+      "Een professionele one-page website",
+      "Perfect leesbaar op elke smartphone",
+      "Klanten bereiken u vlot via het contactformulier",
+      "Meteen zichtbaar via Google Maps en WhatsApp",
+      "Een sterke basis om gevonden te worden in Google",
+      "Online binnen één week",
+    ],
+  },
+  {
     name: "Starter Website",
+    from: "Vanaf",
     price: "€1.000",
     countTarget: 1000,
     countPrefix: "€",
-    cta: "Vrijblijvend aanvragen",
+    tagline: "Voor ondernemingen die professioneel online zichtbaar willen zijn.",
+    cta: "Vraag een offerte aan",
     items: [
-      "Een professionele uitstraling vanaf dag één",
-      "Perfect leesbaar op elke smartphone",
-      "Klanten bereiken u vlot via formulier en WhatsApp",
+      "Ruimte voor uw volledige aanbod, tot vijf pagina's",
+      "Een professioneel ontwerp op maat van uw zaak",
+      "Klanten bereiken u vlot via het contactformulier",
       "Eenvoudig te vinden dankzij Google Maps",
       "Een sterke basis om gevonden te worden in Google",
       "Online binnen twee weken",
@@ -37,30 +57,34 @@ const tiers: Tier[] = [
   },
   {
     name: "Premium Website",
+    from: "Vanaf",
     price: "€2.500",
     countTarget: 2500,
     countPrefix: "€",
     badge: "Meest gekozen",
-    cta: "Vrijblijvend aanvragen",
+    tagline: "Voor bedrijven die meer klanten willen aantrekken en willen groeien.",
+    cta: "Plan een kennismaking",
     items: [
-      "Alles uit Starter Website",
-      "Een uniek ontwerp dat vertrouwen wekt",
-      "Ruimte om uw volledige aanbod te tonen",
+      "Alles uit de Starter Website",
+      "Een uniek premium ontwerp dat opvalt",
+      "Meer vertrouwen bij elke bezoeker",
       "Beter gevonden worden in Google",
-      "Een snelle site die bezoekers vasthoudt",
-      "Persoonlijke uitleg zodat u zelf verder kunt",
+      "Meer offerteaanvragen en boekingen",
+      "Persoonlijke begeleiding van begin tot eind",
     ],
   },
   {
     name: "Maatwerk",
     price: "Op aanvraag",
-    tagline: "Voor wie geen concessies doet.",
-    cta: "Vraag een voorstel",
+    tagline: "Voor bedrijven met specifieke wensen.",
+    cta: "Bespreek uw project",
     items: [
-      "Volledig op maat van uw ambitie",
-      "Webshop of complexe koppelingen",
-      "Gericht op meer aanvragen en omzet",
-      "Persoonlijke opvolging op lange termijn",
+      "Webshops die dag en nacht verkopen",
+      "Boekings- en reservatiesystemen",
+      "Koppelingen met uw bestaande software",
+      "Automatiseringen die u tijd besparen",
+      "Volledig op maat ontwikkeld",
+      "Schaalbaar voor toekomstige groei",
     ],
   },
 ];
@@ -73,13 +97,14 @@ export default function Pricing() {
           TARIEVEN / 03
         </p>
         <h1 data-reveal="1">
-          Duidelijke keuzes.
+          Een website die meer klanten aantrekt.
           <br />
-          <em>Echte waarde.</em>
+          <em>Kies het pakket dat bij uw onderneming past.</em>
         </h1>
         <p data-reveal="1">
-          Elke zaak is anders. Deze pakketten zijn een helder vertrekpunt voor
-          een website die meegroeit met uw onderneming.
+          Van een professionele landing page tot een volledig maatwerkplatform.
+          Elke website wordt gebouwd om vertrouwen te creëren, beter gevonden te
+          worden in Google en meer aanvragen te genereren.
         </p>
       </section>
       <section className="pricing section-pad">
@@ -90,7 +115,7 @@ export default function Pricing() {
         <div className="price-grid">
           {tiers.map((tier, i) => (
             <article
-              className={`price-card ${i === 1 ? "featured" : ""}`}
+              className={`price-card ${tier.badge ? "featured" : ""}`}
               data-reveal="1"
               data-index={i}
               key={tier.name}
@@ -100,6 +125,7 @@ export default function Pricing() {
               ) : null}
               <p className="section-kicker">0{i + 1}</p>
               <h3>{tier.name}</h3>
+              {tier.from ? <span className="price-from">{tier.from}</span> : null}
               <span
                 className="amount"
                 data-count-target={tier.countTarget}
@@ -122,8 +148,8 @@ export default function Pricing() {
           ))}
         </div>
         <p className="price-note" data-reveal="1">
-          Hosting, domeinnaam en onderhoud lopen via een transparant jaartarief.
-          We bespreken dit vooraf, zodat u nooit voor verrassingen komt te staan.
+          Alle prijzen zijn vanafprijzen. De uiteindelijke prijs hangt af van de
+          gewenste functionaliteiten en de omvang van het project.
         </p>
       </section>
       <section className="cta-section section-pad">

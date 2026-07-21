@@ -724,8 +724,13 @@ footer p {
 }
 .price-grid {
   display: grid;
-  grid-template-columns: repeat(3, 1fr);
+  grid-template-columns: repeat(4, 1fr);
   gap: 18px;
+}
+@media (max-width: 1300px) {
+  .price-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
 }
 .price-assurance {
   max-width: 640px;
@@ -771,6 +776,15 @@ footer p {
   letter-spacing: -0.05em;
   margin: 35px 0 9px;
 }
+.price-from {
+  display: block;
+  font-size: 12px;
+  font-weight: 600;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  opacity: 0.55;
+  margin-bottom: 4px;
+}
 .price-card .amount {
   font-family: var(--font-playfair);
   font-size: 40px;
@@ -782,6 +796,9 @@ footer p {
   line-height: 1.4;
   margin: 12px 0 0;
   color: rgba(236, 231, 220, 0.58);
+}
+.price-card.featured .price-tagline {
+  color: color-mix(in srgb, var(--bg) 66%, transparent);
 }
 .price-card ul {
   list-style: none;
