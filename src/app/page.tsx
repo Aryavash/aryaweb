@@ -34,6 +34,10 @@ const projects: Project[] = [
   },
 ];
 
+// Voeg hier echte klantprojecten toe zodra ze live zijn; ze verschijnen dan
+// bovenaan het werkoverzicht, boven de conceptprojecten.
+const clientProjects: Project[] = [];
+
 const steps = [
   {
     title: "Kennismaking",
@@ -156,50 +160,111 @@ export default function Home() {
       <section className="work-section section-pad">
         <div className="section-heading">
           <p className="section-kicker" data-reveal="1">
-            02 / RECENT WERK
+            02 / KLANTPROJECTEN
           </p>
           <Link className="text-link" href="/portfolio">
             Bekijk alle projecten →
           </Link>
         </div>
-        <div className="projects-grid">
-          {projects.map((project, index) => (
-            <article
-              className={`project-card project-${project.color}`}
-              data-reveal="1"
-              data-index={index}
-              data-magnet="card"
-              key={project.name}
-            >
-              <div
-                className={`project-visual${project.image ? " has-photo" : ""}`}
+        {clientProjects.length > 0 ? (
+          <div className="projects-grid">
+            {clientProjects.map((project, index) => (
+              <article
+                className={`project-card project-${project.color}`}
+                data-reveal="1"
+                data-index={index}
+                data-magnet="card"
+                key={project.name}
               >
-                {project.image ? (
-                  <Image
-                    className="project-photo"
-                    src={project.image}
-                    alt={`Website voor ${project.name}`}
-                    fill
-                    sizes="(max-width: 900px) 100vw, 33vw"
-                    style={{ objectFit: "cover" }}
-                  />
-                ) : (
-                  <>
-                    <span className="project-mark">{project.mark}</span>
-                    <span className="project-shape" />
-                  </>
-                )}
-                <span className="project-number">0{index + 1}</span>
-              </div>
-              <div className="project-meta">
-                <div>
-                  <h3>{project.name}</h3>
-                  <p>{project.type}</p>
+                <div
+                  className={`project-visual${project.image ? " has-photo" : ""}`}
+                >
+                  {project.image ? (
+                    <Image
+                      className="project-photo"
+                      src={project.image}
+                      alt={`Website voor ${project.name}`}
+                      fill
+                      sizes="(max-width: 900px) 100vw, 33vw"
+                      style={{ objectFit: "cover" }}
+                    />
+                  ) : (
+                    <>
+                      <span className="project-mark">{project.mark}</span>
+                      <span className="project-shape" />
+                    </>
+                  )}
+                  <span className="project-number">0{index + 1}</span>
                 </div>
-                <ArrowUpRight />
-              </div>
-            </article>
-          ))}
+                <div className="project-meta">
+                  <div>
+                    <h3>{project.name}</h3>
+                    <p>{project.type}</p>
+                  </div>
+                  <ArrowUpRight />
+                </div>
+              </article>
+            ))}
+          </div>
+        ) : (
+          <div className="portfolio-empty" data-reveal="1">
+            <p>
+              Binnenkort verschijnen hier de websites van echte klanten. Wilt u
+              de eerste zijn?
+            </p>
+            <Link className="text-link line-link" href="/contact">
+              Start uw project →
+            </Link>
+          </div>
+        )}
+        <div className="home-concepts">
+          <p className="section-kicker" data-reveal="1">
+            CONCEPTEN
+          </p>
+          <p className="portfolio-concept-intro" data-reveal="1">
+            Zelf ontworpen voorbeeldprojecten die tonen wat mogelijk is voor
+            lokale zaken. Dit zijn concepten, geen bestaande klanten.
+          </p>
+          <div className="projects-grid">
+            {projects.map((project, index) => (
+              <article
+                className={`project-card project-${project.color}`}
+                data-reveal="1"
+                data-index={index}
+                data-magnet="card"
+                key={project.name}
+              >
+                <div
+                  className={`project-visual${project.image ? " has-photo" : ""}`}
+                >
+                  {project.image ? (
+                    <Image
+                      className="project-photo"
+                      src={project.image}
+                      alt={`Conceptwebsite voor ${project.name}`}
+                      fill
+                      sizes="(max-width: 900px) 100vw, 33vw"
+                      style={{ objectFit: "cover" }}
+                    />
+                  ) : (
+                    <>
+                      <span className="project-mark">{project.mark}</span>
+                      <span className="project-shape" />
+                    </>
+                  )}
+                  <span className="concept-badge">Concept</span>
+                  <span className="project-number">0{index + 1}</span>
+                </div>
+                <div className="project-meta">
+                  <div>
+                    <h3>{project.name}</h3>
+                    <p>{project.type}</p>
+                  </div>
+                  <ArrowUpRight />
+                </div>
+              </article>
+            ))}
+          </div>
         </div>
       </section>
       <section className="section-pad proof-section">

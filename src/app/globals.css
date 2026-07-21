@@ -526,6 +526,12 @@ h2 em {
   line-height: 1.6;
   color: rgba(236, 231, 220, 0.6);
 }
+.home-concepts {
+  margin-top: 64px;
+}
+.home-concepts .portfolio-concept-intro {
+  margin-top: 14px;
+}
 .portfolio-empty {
   display: flex;
   flex-direction: column;
