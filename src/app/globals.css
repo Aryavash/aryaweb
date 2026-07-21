@@ -452,7 +452,7 @@ h2 em {
   letter-spacing: 0.08em;
   white-space: nowrap;
   width: max-content;
-  animation: marquee 22s linear infinite;
+  animation: marquee 45s linear infinite;
 }
 .trust-half {
   display: flex;
