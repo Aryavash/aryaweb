@@ -448,14 +448,28 @@ h2 em {
 .trust-track {
   display: flex;
   align-items: center;
-  gap: 30px;
   font-size: 11px;
   letter-spacing: 0.08em;
   white-space: nowrap;
   width: max-content;
   animation: marquee 22s linear infinite;
 }
-.trust-track span {
+.trust-half {
+  display: flex;
+  align-items: center;
+  gap: 30px;
+  flex: none;
+  /* trailing gap so the two halves total exactly 2 x (half + gap),
+     making translateX(-50%) land one half further on for a seamless loop */
+  padding-right: 30px;
+}
+.trust-group {
+  display: flex;
+  align-items: center;
+  gap: 30px;
+  flex: none;
+}
+.trust-group > span {
   opacity: 0.64;
 }
 .trust-track b {

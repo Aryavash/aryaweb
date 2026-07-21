@@ -95,14 +95,18 @@ export default function Home() {
         </div>
         <div className="trust-row">
           <div className="trust-track">
-            <span>VOOR LOKALE ZAKEN DIE WILLEN GROEIEN</span>
-            <b>ONTWERP</b>
-            <b>ONTWIKKELING</b>
-            <b>RESULTAAT</b>
-            <span>VOOR LOKALE ZAKEN DIE WILLEN GROEIEN</span>
-            <b>ONTWERP</b>
-            <b>ONTWIKKELING</b>
-            <b>RESULTAAT</b>
+            {[0, 1].map((half) => (
+              <div className="trust-half" key={half} aria-hidden={half === 1}>
+                {Array.from({ length: 4 }).map((_, i) => (
+                  <span className="trust-group" key={i}>
+                    <span>VOOR LOKALE ZAKEN DIE WILLEN GROEIEN</span>
+                    <b>ONTWERP</b>
+                    <b>ONTWIKKELING</b>
+                    <b>RESULTAAT</b>
+                  </span>
+                ))}
+              </div>
+            ))}
           </div>
         </div>
       </section>
