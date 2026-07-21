@@ -519,6 +519,45 @@ h2 em {
   grid-template-columns: repeat(3, 1fr);
   gap: 19px;
 }
+.portfolio-concept-intro {
+  max-width: 480px;
+  margin: 0 0 30px;
+  font-size: 15px;
+  line-height: 1.6;
+  color: rgba(236, 231, 220, 0.6);
+}
+.portfolio-empty {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 18px;
+  padding: 52px 30px;
+  text-align: center;
+  border: 1px dashed rgba(236, 231, 220, 0.22);
+}
+.portfolio-empty p {
+  max-width: 430px;
+  margin: 0;
+  font-size: 17px;
+  line-height: 1.6;
+  color: rgba(236, 231, 220, 0.62);
+}
+.concept-badge {
+  position: absolute;
+  top: 18px;
+  right: 18px;
+  z-index: 2;
+  padding: 5px 11px;
+  border-radius: 99px;
+  font-size: 10px;
+  font-weight: 700;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--cream);
+  background: rgba(18, 17, 16, 0.7);
+  -webkit-backdrop-filter: blur(4px);
+  backdrop-filter: blur(4px);
+}
 .project-visual {
   height: 335px;
   position: relative;
@@ -635,7 +674,7 @@ h2 em {
 }
 .proof-grid {
   display: grid;
-  grid-template-columns: repeat(3, 1fr);
+  grid-template-columns: repeat(auto-fill, minmax(300px, 380px));
   gap: 19px;
 }
 .proof-card {
@@ -686,6 +725,9 @@ h2 em {
 }
 .proof-lavender {
   background: #aaa0cf;
+}
+.proof-solo {
+  background: var(--orange);
 }
 .proof-author strong {
   display: block;

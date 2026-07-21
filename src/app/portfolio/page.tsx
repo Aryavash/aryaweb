@@ -17,6 +17,10 @@ type Work = {
   image?: string;
 };
 
+// Voeg hier echte klantprojecten toe zodra ze live zijn; ze verschijnen dan
+// automatisch bovenaan de portfolio, boven de conceptprojecten.
+const clientWork: Work[] = [];
+
 const work: Work[] = [
   {
     name: "Cut Barbershop",
@@ -59,7 +63,72 @@ export default function Portfolio() {
           te overtuigen en bezoekers in klanten te veranderen.
         </p>
       </section>
+      <section className="section-pad portfolio-clients">
+        <div className="section-heading">
+          <p className="section-kicker" data-reveal="1">
+            01 / KLANTPROJECTEN
+          </p>
+        </div>
+        {clientWork.length > 0 ? (
+          <div className="portfolio-grid">
+            {clientWork.map(({ name, description, color, mark, image }, i) => (
+              <article
+                className={`project-card project-${color}`}
+                data-reveal="1"
+                data-index={i}
+                data-magnet="card"
+                key={name}
+              >
+                <div className={`project-visual${image ? " has-photo" : ""}`}>
+                  {image ? (
+                    <Image
+                      className="project-photo"
+                      src={image}
+                      alt={`Website voor ${name}`}
+                      fill
+                      sizes="(max-width: 900px) 100vw, 33vw"
+                      style={{ objectFit: "cover" }}
+                    />
+                  ) : (
+                    <>
+                      <span className="project-mark">{mark}</span>
+                      <span className="project-shape" />
+                    </>
+                  )}
+                  <span className="project-number">0{i + 1}</span>
+                </div>
+                <div className="project-meta">
+                  <div>
+                    <h3>{name}</h3>
+                    <p>{description}</p>
+                  </div>
+                  <ArrowUpRight />
+                </div>
+              </article>
+            ))}
+          </div>
+        ) : (
+          <div className="portfolio-empty" data-reveal="1">
+            <p>
+              Hier verschijnen binnenkort de websites van echte klanten. Wilt u
+              de eerste zijn?
+            </p>
+            <Link className="text-link line-link" href="/contact">
+              Start uw project →
+            </Link>
+          </div>
+        )}
+      </section>
       <section className="work-section section-pad">
+        <div className="section-heading">
+          <p className="section-kicker" data-reveal="1">
+            02 / CONCEPTEN
+          </p>
+        </div>
+        <p className="portfolio-concept-intro" data-reveal="1">
+          Zelf ontworpen conceptprojecten die tonen wat mogelijk is voor lokale
+          zaken. Dit zijn voorbeelden, geen bestaande klanten.
+        </p>
         <div className="portfolio-grid">
           {work.map(({ name, description, color, mark, image }, i) => (
             <article
@@ -74,7 +143,7 @@ export default function Portfolio() {
                   <Image
                     className="project-photo"
                     src={image}
-                    alt={`Website voor ${name}`}
+                    alt={`Conceptwebsite voor ${name}`}
                     fill
                     sizes="(max-width: 900px) 100vw, 33vw"
                     style={{ objectFit: "cover" }}
@@ -85,6 +154,7 @@ export default function Portfolio() {
                     <span className="project-shape" />
                   </>
                 )}
+                <span className="concept-badge">Concept</span>
                 <span className="project-number">0{i + 1}</span>
               </div>
               <div className="project-meta">

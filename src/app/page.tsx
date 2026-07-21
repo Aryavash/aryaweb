@@ -213,33 +213,24 @@ export default function Home() {
             <em>aan het woord.</em>
           </h2>
           <p data-reveal="1">
-            Echte reacties van ondernemingen waarmee ik werkte. Binnenkort leest
-            u hier hun ervaring in hun eigen woorden.
+            Binnenkort leest u hier de ervaring van de ondernemer met wie ik
+            werk, in zijn of haar eigen woorden.
           </p>
         </div>
         <div className="proof-grid">
-          {projects.map((project, index) => (
-            <article
-              className="proof-card"
-              data-reveal="1"
-              data-index={index}
-              key={project.name}
-            >
-              {/* Vervang de plaatshouders door een echt resultaat en citaat
-                  zodra de klant hiervoor toestemming heeft gegeven. */}
-              <span className="proof-stat">[X]% meer boekingen</span>
-              <p className="proof-quote">&ldquo;[Klantcitaat hier invullen]&rdquo;</p>
-              <div className="proof-author">
-                <span className={`proof-mark proof-${project.color}`}>
-                  {project.mark}
-                </span>
-                <div>
-                  <strong>{project.name}</strong>
-                  <span>[Naam eigenaar]</span>
-                </div>
+          {/* Eén klant voor nu. Voeg extra kaarten toe zodra er meer
+              klantervaringen zijn; vervang eerst de plaatshouders hieronder. */}
+          <article className="proof-card" data-reveal="1">
+            <span className="proof-stat">[X]% meer boekingen</span>
+            <p className="proof-quote">&ldquo;[Klantcitaat hier invullen]&rdquo;</p>
+            <div className="proof-author">
+              <span className="proof-mark proof-solo">★</span>
+              <div>
+                <strong>[Bedrijfsnaam]</strong>
+                <span>[Naam eigenaar]</span>
               </div>
-            </article>
-          ))}
+            </div>
+          </article>
         </div>
       </section>
       <section className="statement section-pad">
