@@ -1027,6 +1027,11 @@ footer p {
   font-size: 18px;
   border-bottom: 1px solid currentColor;
 }
+.contact-vat {
+  margin-top: 20px;
+  font-size: 13px;
+  opacity: 0.5;
+}
 .contact-form {
   background: var(--bg-2);
   padding: 35px;

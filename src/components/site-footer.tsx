@@ -50,6 +50,8 @@ export default function SiteFooter() {
       </nav>
       <div className="footer-bottom">
         <span>© 2026 Aryaweb</span>
+        {/* Vervang door uw officiële BTW-nummer zodra u geregistreerd bent. */}
+        <span>[BTW-nummer]</span>
         <span>Met zorg gemaakt in België.</span>
       </div>
     </footer>

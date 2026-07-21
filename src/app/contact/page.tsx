@@ -19,6 +19,8 @@ export default function Contact() {
         <div className="contact-details">
           <p>Liever rechtstreeks contact?</p>
           <a href="mailto:hello@aryaweb.be">hello@aryaweb.be</a>
+          {/* Vervang door uw officiële BTW-nummer zodra u geregistreerd bent. */}
+          <p className="contact-vat">[BTW-nummer]</p>
         </div>
       </div>
       <ContactForm />
