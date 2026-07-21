@@ -5,7 +5,7 @@ import { ArrowUpRight } from "../../components/icons";
 export const metadata: Metadata = {
   title: "Diensten",
   description:
-    "Webdesign, websiteontwikkeling, SEO, hosting en onderhoud voor lokale ondernemingen in België.",
+    "Webdesign, websiteontwikkeling, SEO, hosting en onderhoud voor lokale ondernemingen in Brugge en heel België.",
 };
 
 type Service = {

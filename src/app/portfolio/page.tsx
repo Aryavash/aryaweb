@@ -6,7 +6,7 @@ import { ArrowUpRight } from "../../components/icons";
 export const metadata: Metadata = {
   title: "Portfolio",
   description:
-    "Bekijk voorbeeldprojecten van Aryaweb voor lokale kappers en barbershops die willen opvallen en meer klanten aantrekken.",
+    "Bekijk voorbeeldprojecten van Aryaweb voor lokale kappers en barbershops in Brugge en België die willen opvallen en meer klanten aantrekken.",
 };
 
 type Work = {

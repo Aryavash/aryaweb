@@ -19,25 +19,28 @@ const siteUrl = "https://aryaweb.be";
 export const metadata: Metadata = {
   metadataBase: new URL(siteUrl),
   title: {
-    default: "Aryaweb | Professionele websites voor lokale ondernemingen",
+    default:
+      "Aryaweb | Professionele websites voor lokale ondernemingen in Brugge",
     template: "%s | Aryaweb",
   },
   description:
-    "Webdesign en websiteontwikkeling voor lokale ondernemingen in België.",
+    "Webdesign en websiteontwikkeling voor lokale ondernemingen in Brugge en heel België.",
   openGraph: {
     type: "website",
     locale: "nl_BE",
     siteName: "Aryaweb",
-    title: "Aryaweb | Professionele websites voor lokale ondernemingen",
+    title:
+      "Aryaweb | Professionele websites voor lokale ondernemingen in Brugge",
     description:
-      "Webdesign en websiteontwikkeling voor lokale ondernemingen in België.",
+      "Webdesign en websiteontwikkeling voor lokale ondernemingen in Brugge en heel België.",
     url: siteUrl,
   },
   twitter: {
     card: "summary_large_image",
-    title: "Aryaweb | Professionele websites voor lokale ondernemingen",
+    title:
+      "Aryaweb | Professionele websites voor lokale ondernemingen in Brugge",
     description:
-      "Webdesign en websiteontwikkeling voor lokale ondernemingen in België.",
+      "Webdesign en websiteontwikkeling voor lokale ondernemingen in Brugge en heel België.",
   },
 };
 
@@ -46,10 +49,19 @@ const jsonLd = {
   "@type": "ProfessionalService",
   name: "Aryaweb",
   description:
-    "Webdesign en websiteontwikkeling voor lokale ondernemingen in België.",
+    "Webdesign en websiteontwikkeling voor lokale ondernemingen in Brugge en heel België.",
   url: siteUrl,
   email: "hello@aryaweb.be",
-  areaServed: "BE",
+  areaServed: [
+    { "@type": "City", name: "Brugge" },
+    { "@type": "Country", name: "België" },
+  ],
+  address: {
+    "@type": "PostalAddress",
+    addressLocality: "Brugge",
+    addressRegion: "West-Vlaanderen",
+    addressCountry: "BE",
+  },
   inLanguage: "nl-BE",
 };
 

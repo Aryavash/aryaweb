@@ -5,7 +5,7 @@ import { ArrowUpRight } from "../../components/icons";
 export const metadata: Metadata = {
   title: "Tarieven",
   description:
-    "Een website die meer klanten aantrekt. Kies het pakket dat bij uw onderneming past: Landing Page, Starter, Premium of volledig Maatwerk.",
+    "Een website die meer klanten aantrekt. Kies het pakket dat bij uw onderneming past: Landing Page, Starter, Premium of volledig Maatwerk — voor lokale ondernemingen in Brugge en België.",
 };
 
 type Tier = {

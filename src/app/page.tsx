@@ -48,7 +48,8 @@ export default function Home() {
             </h1>
             <p className="hero-copy">
               Ik ontwerp en ontwikkel moderne websites voor lokale
-              ondernemingen — van kappers tot restaurants en bakkers.
+              ondernemingen in Brugge en heel België — van kappers tot
+              restaurants en bakkers.
             </p>
             <div className="button-row">
               <Link
