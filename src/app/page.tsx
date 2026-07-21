@@ -34,6 +34,29 @@ const projects: Project[] = [
   },
 ];
 
+const steps = [
+  {
+    title: "Kennismaking",
+    text: "We bespreken uw zaak, uw doelen en wat uw klanten zoeken.",
+  },
+  {
+    title: "Ontwerp",
+    text: "Ik vertaal uw verhaal naar een helder ontwerp op maat.",
+  },
+  {
+    title: "Ontwikkeling",
+    text: "Uw site wordt snel, mobielvriendelijk en klaar om gevonden te worden.",
+  },
+  {
+    title: "Lancering",
+    text: "We zetten uw website live en controleren dat alles vlekkeloos werkt.",
+  },
+  {
+    title: "Nazorg",
+    text: "Na de lancering blijf ik beschikbaar voor updates en vragen.",
+  },
+];
+
 export default function Home() {
   return (
     <>
@@ -200,6 +223,36 @@ export default function Home() {
         >
           Meer over mij <ArrowUpRight />
         </Link>
+      </section>
+      <section className="section-pad process-section">
+        <p className="section-kicker" data-reveal="1">
+          04 / HOE HET WERKT
+        </p>
+        <div className="split-heading">
+          <h2 data-reveal="1">
+            Van eerste gesprek
+            <br />
+            tot <em>online succes.</em>
+          </h2>
+          <p data-reveal="1">
+            Een helder traject in vijf stappen. U weet altijd waar we staan en
+            wat de volgende stap is.
+          </p>
+        </div>
+        <ol className="process-grid">
+          {steps.map((step, index) => (
+            <li
+              className="process-step"
+              data-reveal="1"
+              data-index={index}
+              key={step.title}
+            >
+              <span className="process-num">0{index + 1}</span>
+              <h3>{step.title}</h3>
+              <p>{step.text}</p>
+            </li>
+          ))}
+        </ol>
       </section>
       <section className="cta-section section-pad">
         <p data-reveal="1">Klaar om online sterker te staan?</p>
