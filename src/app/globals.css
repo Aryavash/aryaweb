@@ -182,15 +182,15 @@ main {
   -webkit-backdrop-filter: blur(10px);
   backdrop-filter: blur(10px);
   border-bottom: 1px solid var(--line);
+  padding: 0 4.5vw;
 }
 .site-header {
   height: 82px;
   display: flex;
   align-items: center;
   justify-content: space-between;
-  max-width: 1440px;
+  max-width: 1340px;
   margin: auto;
-  padding: 0 4.5vw;
   font-size: 14px;
 }
 .menu-toggle {
@@ -1294,6 +1294,8 @@ footer p {
 @media (max-width: 700px) {
   .site-header {
     height: 68px;
+  }
+  .site-header-bar {
     padding: 0 22px;
   }
   .menu-toggle {
